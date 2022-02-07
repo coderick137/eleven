@@ -31,8 +31,10 @@ export default function Drinks() {
       <DrinkCategories
         drinksCategories={ drinksCategories }
       />
-      { drinks.filter((drink, idx) => idx <= eleven)
-        .map((drink, idx) => <DrinkCard key={ idx } item={ drink } index={ idx } />) }
+      <div className="mainscreen-container">
+        { drinks.filter((drink, idx) => idx <= eleven)
+          .map((drink, idx) => <DrinkCard key={ idx } item={ drink } index={ idx } />) }
+      </div>
       <Footer />
     </div>
   );

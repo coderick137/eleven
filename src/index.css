@@ -5,7 +5,7 @@
   --header-height: 3rem;
 
   /*==========Colors===========*/
-  --hue-color: 143; /* Green 142 - Blue 230*/
+  --hue-color: 139; /* Green 142 - Blue 230*/
 
   /*==========Hsl Colors===========*/
   --first-color: hsl(var(--hue-color), 60%, 54%);
@@ -263,4 +263,73 @@ textarea {
   display: flex;
   justify-content: space-around;
   margin-top: 2%;
+}
+
+/*==================== TELA PRINCIPAL ====================*/
+.ItemFoodOrDrink {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin: 2%;
+  width: 46%;
+  background-color: var(--first-color-second);
+  border-radius: .5rem;
+}
+
+.ItemFoodOrDrink:hover {
+   animation: createBox 0.5s;
+}
+@keyframes createBox {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+  
+}
+
+.food-image {
+border-top-left-radius: .5rem;
+border-top-right-radius: .5rem;
+width: 100%;
+height: 80%;
+}
+
+.text-cards {
+  display: flex;
+  font-size: var(--font-medium);
+  height: 3rem;
+  overflow-y: hidden;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.mainscreen-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--body-color);
+  text-align: center;
+}
+
+.main-filter-container {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  background-color: var(--body-color);  
+  text-align: center;
+  padding: 1rem;
+}
+
+.button--filter {
+  display: flex;
+  align-items: center;
+  background-color: var(--first-color);
+  color: var(--container-color);
+  border-radius: .1rem;
+  font-size: var(--small-font-size);
+  width: 10rem;
+  margin-top: .25rem;
 }
