@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import profileIcon from '../../images/profileIcon.svg';
-import searchIcon from '../../images/searchIcon.svg';
-// import { BiSearchAlt } from 'react-icons/bi';
-// import { BsPersonFill } from 'react-icons/bs';
+import { BiSearchAlt } from 'react-icons/bi';
+import { BsPerson } from 'react-icons/bs';
 import SearchBar from './SearchBar';
 import '../../index.css';
 
@@ -37,8 +35,7 @@ export default function Header() {
       <div className="section__header">
         <div className="header__icon">
           <Link className="header__icon" to="/profile">
-            <img
-              src={ profileIcon }
+            <BsPerson
               data-testid="profile-top-btn"
               className="header__icon--person" // ====
               alt="Ícone default de perfil"
@@ -58,15 +55,13 @@ export default function Header() {
           || currentPathName === '/drinks'
           || currentPathName === '/explore/foods/nationalities') && (
             <div
-              onClick={ renderSearchBar }
               onKeyPress={ renderSearchBar }
               role="button"
               tabIndex={ 0 }
             >
-              <img
-                src={ searchIcon }
+              <BiSearchAlt
+                onClick={ renderSearchBar }
                 className="header__icon--search"
-                data-testid="search-top-btn" // ====
                 alt="Ícone default de pesquisa"
               />
             </div>

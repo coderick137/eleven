@@ -83,66 +83,66 @@ export default function SearchBar() {
 
   return (
     <div className="Search">
-      <label htmlFor="searchInput">
+      <div className="section__search">
         <input
           type="text"
           name="searchInput"
           id="searchInput"
-          data-testid="search-input"
+          className="search__input"
           placeholder="Search Recipe"
           onChange={ ({ target }) => setSearchedItem(target.value) }
           value={ searchedItem }
         />
-        <div className="SearchFilters">
-          <label htmlFor="ingredientRdBtn">
-            <input
-              type="radio"
-              name="ingredientRdBtn"
-              id="ingredientRdBtn"
-              data-testid="ingredient-search-radio"
-              onChange={ ({ target }) => setChosenRadioBtn(target.value) }
-              value="ingredientRdBtn"
-              checked={ chosenRadioBtn === 'ingredientRdBtn' }
-            />
-            {' '}
-            Ingrediente
-          </label>
-          <label htmlFor="foodNameRdBtn">
-            <input
-              type="radio"
-              name="foodNameRdBtn"
-              id="foodNameRdBtn"
-              data-testid="name-search-radio"
-              value="foodNameRdBtn"
-              onChange={ ({ target }) => setChosenRadioBtn(target.value) }
-              checked={ chosenRadioBtn === 'foodNameRdBtn' }
-            />
-            {' '}
-            Nome
-          </label>
-          <label htmlFor="firstLetterRdBtn">
-            <input
-              type="radio"
-              name="firstLetterRdBtn"
-              id="firstLetterRdBtn"
-              data-testid="first-letter-search-radio"
-              value="firstLetterRdBtn"
-              onChange={ ({ target }) => setChosenRadioBtn(target.value) }
-              checked={ chosenRadioBtn === 'firstLetterRdBtn' }
-            />
-            {' '}
-            Primeira letra
-          </label>
-          <button
-            type="button"
-            className="SearchButton"
-            data-testid="exec-search-btn"
-            onClick={ onSearchClick }
-          >
-            Buscar
-          </button>
-        </div>
-      </label>
+        <button
+          type="button"
+          className="btn--search"
+          data-testid="exec-search-btn"
+          onClick={ onSearchClick }
+        >
+          Buscar
+        </button>
+      </div>
+      <div className="SearchFilters">
+        <label htmlFor="ingredientRdBtn">
+          <input
+            type="radio"
+            name="ingredientRdBtn"
+            id="ingredientRdBtn"
+            data-testid="ingredient-search-radio"
+            onChange={ ({ target }) => setChosenRadioBtn(target.value) }
+            value="ingredientRdBtn"
+            checked={ chosenRadioBtn === 'ingredientRdBtn' }
+          />
+          {' '}
+          Ingrediente
+        </label>
+        <label htmlFor="foodNameRdBtn">
+          <input
+            type="radio"
+            name="foodNameRdBtn"
+            id="foodNameRdBtn"
+            data-testid="name-search-radio"
+            value="foodNameRdBtn"
+            onChange={ ({ target }) => setChosenRadioBtn(target.value) }
+            checked={ chosenRadioBtn === 'foodNameRdBtn' }
+          />
+          {' '}
+          Nome
+        </label>
+        <label htmlFor="firstLetterRdBtn">
+          <input
+            type="radio"
+            name="firstLetterRdBtn"
+            id="firstLetterRdBtn"
+            data-testid="first-letter-search-radio"
+            value="firstLetterRdBtn"
+            onChange={ ({ target }) => setChosenRadioBtn(target.value) }
+            checked={ chosenRadioBtn === 'firstLetterRdBtn' }
+          />
+          {' '}
+          Primeira letra
+        </label>
+      </div>
     </div>
   );
 }
