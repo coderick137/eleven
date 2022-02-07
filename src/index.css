@@ -1,0 +1,266 @@
+/*======================== GOOGLE FONTES =====================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/*======================== VARIAVEIS =========================================*/
+:root {
+  --header-height: 3rem;
+
+  /*==========Colors===========*/
+  --hue-color: 143; /* Green 142 - Blue 230*/
+
+  /*==========Hsl Colors===========*/
+  --first-color: hsl(var(--hue-color), 60%, 54%);
+  --first-color-second: hsl(var(--hue-color), 63%, 44%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --second-color-alt: hsl(var(--hue-color), 23%, 38%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --swiper-theme-color: hsl(var(--hue-color), 63%, 61%);
+  --container-color: hsl(var(--hue-color), 63%, 100%);
+  --container-second-color: hsl(var(--hue-color), 2%, 85%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --scroll-bar-color: hsl(var(--hue-color), 15%, 90%);
+
+  /*==========Font e Tipografia===========*/
+  --body-font: 'Poppins', sans-serif;
+
+  /* 0.5rem = 8px, 1rem = 16px, 1.5rem = 24px...*/
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*==========Font Weight===========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*==========Margins Bottom ===========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px...*/
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ===========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*======================= BASE ===============================================*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color)
+}
+
+h1,h2,h3,h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+/*======================= REUSAVEL CSS CLASSES ==============================*/
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section__title {
+  font-size: var(--h3-font-size)
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-2-5);
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+/*==================== BUTTONS ====================*/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--container-color);
+  padding: .7rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  font-size: var(--small-font-size);
+  width: 8rem;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button__icon {
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: .3s;
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button--small {
+  padding: .75rem 1rem;
+}
+
+.button--link {
+  padding: 0;
+  background-color: transparent;
+  color: var(--first-color);
+}
+
+.button--link:hover {
+  background-color: transparent;
+  color: var(--first-color-alt);
+}
+
+/*==================== HEADER ====================*/
+
+.section__header {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--first-color);
+  padding: .5rem;
+}
+
+.header__tilte {
+  font-size: 1rem;
+  cursor: default;
+}
+
+.header__tilte--h1 {
+  color: var(--container-color);
+}
+
+.header__icon--search {
+  color: var(--container-color);
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.header__icon--search:hover {
+  color: var(--container-second-color);
+}
+
+.header__icon--person {
+  color: var(--container-color);
+  font-size: 2.5rem;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.header__icon--person:hover {
+  color: var(--container-second-color);
+}
+
+.header__icon {
+  display: inline-flex;
+}
+
+/*==================== FOOTER ====================*/
+.footer {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  background-color: var(--first-color);
+  position: fixed;
+}
+
+.startRecipeBtn {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  background-color: var(--first-color);
+  position: fixed;
+  color: var(--title-color);
+}
+
+.riskedOn {
+  text-decoration: line-through;
+}
+
+/*==================== EXPLORER ====================*/
+.SearchFilters {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2%;
+}
