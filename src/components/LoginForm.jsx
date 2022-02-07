@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import Context from '../context/Context';
+import Logo from '../images/logo-eleven.png';
 
 export default function LoginForm() {
   // ESTADOS ---------------------------------------------------------------------------------------
@@ -31,36 +33,35 @@ export default function LoginForm() {
   // -------------------------------------------------
   return (
     <form>
-      <div className="email">
-        <label htmlFor="email-input">
-          E-mail
+      <div className="login__inputs grid">
+        <img src={ Logo } alt="" className="logo" />
+        <div className="login__content">
+          <label className="login__label" htmlFor="email-input">E-mail</label>
           <input
-            data-testid="email-input"
+            className="login__input"
             type="email"
             name="userMail"
             onChange={ ({ target }) => setUserMail(target.value) }
             value={ userMail }
             id="email-input"
           />
-        </label>
+        </div>
       </div>
-      <div className="senha">
-        <label htmlFor="password-input">
-          Senha:
-          <input
-            data-testid="password-input"
-            type="password"
-            name="userPassword"
-            onChange={ ({ target }) => setUserPassword(target.value) }
-            value={ userPassword }
-            id="password-input"
-          />
-        </label>
+      <div className="login__content">
+        <label className="login__label" htmlFor="password-input">Senha</label>
+        <input
+          className="login__input"
+          type="password"
+          name="userPassword"
+          onChange={ ({ target }) => setUserPassword(target.value) }
+          value={ userPassword }
+          id="password-input"
+        />
       </div>
-      <div>
+      <div className="button--login">
         <button
+          className="button"
           type="submit"
-          data-testid="login-submit-btn"
           id="loginBtn"
           disabled={
             !(mailValidator(userMail) && (userPassword.length > minNumOfCaracs))

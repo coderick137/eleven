@@ -5,7 +5,7 @@
   --header-height: 3rem;
 
   /*==========Colors===========*/
-  --hue-color: 143; /* Green 142 - Blue 230*/
+  --hue-color: 139; /* Green 142 - Blue 230*/
 
   /*==========Hsl Colors===========*/
   --first-color: hsl(var(--hue-color), 60%, 54%);
@@ -184,6 +184,65 @@ textarea {
   color: var(--first-color-alt);
 }
 
+/*==================== LOGIN ====================*/
+.section__login {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__container {
+  row-gap: 3rem;
+  margin: 3.5rem;
+}
+
+.title__login {
+  color: var(--first-color);
+  font-size: var(--big-font-size);
+}
+
+.login__inputs {
+  margin-top: 1rem;
+}
+
+.login__content {
+  background-color: var(--input-color);
+  border-radius: .5rem;
+  padding: .75rem 1rem .25rem;
+  margin-top: var(--mb-1);
+}
+
+.login__label {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  font-family: var(--body-font);
+}
+
+.login__input {
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: .25rem .5rem .5rem 0;
+}
+
+.logo {
+  width: 20rem;
+}
+
+.button--login {
+  margin-top: 1.3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 7rem;
+}
+
+
 /*==================== HEADER ====================*/
 
 .section__header {
@@ -201,18 +260,14 @@ textarea {
 }
 
 .header__tilte--h1 {
-  color: var(--container-color);
+  color: #fff
 }
 
 .header__icon--search {
-  color: var(--container-color);
+  color: #fff;
   font-size: 2.5rem;
   margin-left: 2rem;
   cursor: pointer;
-}
-
-.header__icon--search:hover {
-  color: var(--container-second-color);
 }
 
 .header__icon--person {
@@ -222,12 +277,58 @@ textarea {
   cursor: pointer;
 }
 
-.header__icon--person:hover {
-  color: var(--container-second-color);
-}
-
 .header__icon {
   display: inline-flex;
+}
+
+/*==================== SEARCHBAR ====================*/
+
+.search__input {
+  width: 50%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: .25rem .5rem .5rem 0;
+  border-radius: .5rem;
+}
+
+.section__search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  background-color: var(--first-color);
+  padding: .25rem .5rem .5rem 0;
+  color: #fff;
+  border-radius: 5rem;
+}
+
+.Search {
+  display: grid;
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.SearchFilters {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2%;
+}
+
+.SearchButton {
+  margin: 2%;
+  background-color: var(--first-color);
+  color: white;
 }
 
 /*==================== FOOTER ====================*/
@@ -240,6 +341,31 @@ textarea {
   bottom: 0;
   background-color: var(--first-color);
   position: fixed;
+  padding: .5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  justify-items: center;
+}
+
+/* .section__footer {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--first-color);
+  padding: .5rem;
+} */
+
+.footer__icon {
+  color: var(--container-color);
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.footer__icon {
+  color: var(--container-color);
+  font-size: 2.5rem;
+  cursor: pointer;
 }
 
 .startRecipeBtn {
