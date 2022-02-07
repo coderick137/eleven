@@ -29,7 +29,7 @@ export default function DrinkCategories({ drinksCategories }) {
 
   // ===============================================================================================
   return (
-    <div>
+    <div className="main-filter-container">
       <button
         className="button--filter"
         data-testid="All-category-filter"

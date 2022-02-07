@@ -7,7 +7,7 @@ function FoodCard({ meals }) {
   const history = useHistory();
 
   return (
-    <div>
+    <div className="mainscreen-container">
       {meals.filter((_meal, i) => (i <= eleven))
         .map((item, index) => (
           <div
@@ -20,12 +20,14 @@ function FoodCard({ meals }) {
             tabIndex={ 0 }
           >
             <img
+              className="food-image"
               src={ item.strMealThumb }
               alt={ item.strMeal }
               width="150px"
               data-testid={ `${index}-card-img` }
             />
             <h2
+              className="text-cards"
               data-testid={ `${index}-card-name` }
             >
               {item.strMeal}

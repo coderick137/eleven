@@ -11,29 +11,28 @@ function DrinkCard({ item, index }) {
     ? '-recomendation-card' : '-card-name';
 
   return (
-    <div className="FoodOrDrinkCardsContainer">
-      <div
-        key={ item.idDrink }
-        data-testid={ `${index}-recipe-card` }
-        className="ItemFoodOrDrink"
-        onClick={ () => history.push(`/drinks/${item.idDrink}`) }
-        onKeyDown={ () => history.push(`/drinks/${item.idDrink}`) }
-        role="button"
-        tabIndex={ 0 }
+    <div
+      key={ item.idDrink }
+      data-testid={ `${index}-recipe-card` }
+      className="ItemFoodOrDrink"
+      onClick={ () => history.push(`/drinks/${item.idDrink}`) }
+      onKeyDown={ () => history.push(`/drinks/${item.idDrink}`) }
+      role="button"
+      tabIndex={ 0 }
+    >
+      <img
+        className="food-image"
+        src={ item.strDrinkThumb }
+        alt={ item.strDrink }
+        width="150px"
+        data-testid={ `${index}-card-img` }
+      />
+      <h2
+        className="text-cards"
+        data-testid={ `${index}${handleDataTestId}` }
       >
-        <img
-          src={ item.strDrinkThumb }
-          alt={ item.strDrink }
-          width="150px"
-          data-testid={ `${index}-card-img` }
-        />
-        <h2
-          className="NameFoodOrDrink"
-          data-testid={ `${index}${handleDataTestId}` }
-        >
-          {item.strDrink}
-        </h2>
-      </div>
+        {item.strDrink}
+      </h2>
     </div>
   );
 }
