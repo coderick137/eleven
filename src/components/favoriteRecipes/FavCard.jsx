@@ -8,7 +8,7 @@ export default function FavCard({ recipe }) {
   return (
     <div className="ItemFoodOrDrink">
       <Link
-        to={ `/foods/${recipe.id}` }
+        to={ `/${recipe.type}s/${recipe.id}` }
       >
         <img
           className="food-image"
