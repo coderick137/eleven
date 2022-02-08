@@ -34,6 +34,10 @@ export default function MyProvider({ children }) {
     setFavoriteRecipes(filter);
   };
 
+  useEffect(() => {
+    localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));
+  }, [favoriteRecipes]);
+
   // RECEITAS EM PROGRESSO -------------------------------------------------------------------------
   const [inProgressRecipes, setInProgressRecipes] = useState(
     JSON.parse(localStorage.getItem('inProgressRecipes'))
