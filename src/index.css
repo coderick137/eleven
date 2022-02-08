@@ -450,12 +450,76 @@ height: 80%;
 }
 
 .button--filter {
-  display: flex;
-  align-items: center;
+  display: inline-block;
   background-color: var(--first-color);
   color: var(--container-color);
-  border-radius: .1rem;
+  border-radius: .5rem;
   font-size: var(--small-font-size);
-  width: 10rem;
   margin-top: .25rem;
+  padding: .5rem;
+  white-space: nowrap;
+}
+
+/*==================== BOTÕES EXPLORAR ====================*/
+#explorePageBtnsContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+#explorePageBtnsContainer button {
+  background-color: var(--first-color);
+  border-radius: .5rem;
+  color: var(--container-color);
+  font-size: var(--h2-font-size);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  width: 60%;
+}
+
+/*==================== RECEITAS PRONTAS ====================*/
+.items-done-recipes {
+  margin: 1.5rem 0;
+}
+
+.ItemFavorite {
+  display: flex;
+  padding: 0 15px;
+}
+
+.item-favorite-link {
+  width: 60%;
+}
+
+.item-favorite-img {
+  border-radius: 15px 50px 30px;
+  width: 100%;
+}
+
+.item-favorite-info {
+  height: 60%;
+  padding: 15px;
+  width: 40%;
+}
+
+.item-favorite-info h4 {
+  color: var(--title-color);
+}
+
+.item-favorite-info a {
+  color: var(--text-color);
+}
+
+.done-recipes-filter {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.done-recipes-filter button {
+  color: var(--title-color);
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  margin: 0 20px;
 }

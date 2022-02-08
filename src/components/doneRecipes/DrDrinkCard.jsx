@@ -8,12 +8,13 @@ export default function DrDrinkCard({ doneRecipesArray }) {
   const currentPathName = location.pathname;
 
   return (
-    <div>
+    <div className="items-done-recipes">
       {doneRecipesArray.map((rec, index) => (
         rec.type === 'drink'
         && (
           <div className="ItemFavorite" key={ rec.id }>
             <Link
+              className="item-favorite-link"
               to={ `/drinks/${rec.id}` }
             >
               <img
@@ -21,9 +22,10 @@ export default function DrDrinkCard({ doneRecipesArray }) {
                 alt="Imagem da Receita"
                 data-testid={ `${index}-horizontal-image` }
                 width="160px"
+                className="item-favorite-img"
               />
             </Link>
-            <div>
+            <div className="item-favorite-info">
               <h4 data-testid={ `${index}-horizontal-top-text` }>{rec.alcoholicOrNot}</h4>
               <Link
                 to={ `/drinks/${rec.id}` }
