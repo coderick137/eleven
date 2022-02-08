@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function DrFilter({ setSelectFilter }) {
   return (
-    <div>
+    <div className="done-recipes-filter">
       <button
         data-testid="filter-by-all-btn"
         type="button"
